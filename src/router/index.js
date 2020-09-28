@@ -5,8 +5,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import( '../views/Home.vue'),
+    name: 'HomeHouse',
+    component: () => import( '../views/home/HomeHouse.vue'),
     meta:{
       showTabbar:true,
     }
@@ -27,14 +27,7 @@ const routes = [
       showTabbar:true,
     }
   },
-  {
-    path: '/HomeHouse',
-    name: 'HomeHouse',
-    component: () => import( '../views/home/HomeHouse.vue'),
-    meta:{
-      showTabbar:true,
-    }
-  },
+  
   {
     path: '/MineHome',
     name: 'MineHome',
