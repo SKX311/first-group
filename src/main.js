@@ -10,6 +10,11 @@ import axios from 'axios';
 Vue.prototype.$axios=axios
 
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+Vue.use(ElementUI);
 
 new Vue({
   router,
