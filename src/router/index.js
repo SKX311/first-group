@@ -5,11 +5,16 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import( '../views/Home.vue'),
+    name: 'HomeHouse',
+    component: () => import( '../views/home/HomeHouse.vue'),
     meta:{
       showTabbar:true,
     }
+  },
+  {
+    path: '/Coach',
+    name: 'Coach',
+    component: () => import( '../views/home/Coach.vue'),
   },
   {
     path: '/CourseHome',
@@ -27,14 +32,7 @@ const routes = [
       showTabbar:true,
     }
   },
-  {
-    path: '/HomeHouse',
-    name: 'HomeHouse',
-    component: () => import( '../views/home/HomeHouse.vue'),
-    meta:{
-      showTabbar:true,
-    }
-  },
+  
   {
     path: '/MineHome',
     name: 'MineHome',
@@ -56,6 +54,7 @@ const routes = [
     name: 'class_item',
     component: () => import( '../views/record/record_item/class_item.vue'),
   }
+  
 ]
 
 const router = new VueRouter({
