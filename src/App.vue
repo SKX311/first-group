@@ -27,7 +27,6 @@ export default {
 * {
   font-size: 0.24rem;
 }
-<<<<<<< HEAD
 // .grid{
 //   height: 0.96rem;
 // }
@@ -52,7 +51,5 @@ export default {
   margin: 0 auto;
 }
 }
-=======
 
->>>>>>> e146b762659679b6ee59283c9dc848406882edff
 </style>
