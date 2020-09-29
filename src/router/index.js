@@ -50,17 +50,40 @@ const routes = [
     }
   },
   {
+<<<<<<< HEAD
     path: '/class_item',
     name: 'class_item',
     component: () => import( '../views/record/record_item/class_item.vue'),
   }
   
+=======
+    path: '/Login',
+    name: 'Login',
+    component: () => import( '../views/mine/Login.vue'),
+    meta:{
+      showTabbar:false,
+    }
+  },
+>>>>>>> b589ecbf04963509a3b9ccfdca2d40318c3018b6
 ]
 
 const router = new VueRouter({
    mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to,from,next)=>{
+  var TOKEN = localStorage.getItem('token')
+  if (to.name === 'Login') {
+    next()
+  } else {
+    if (TOKEN) {
+      next()
+    } else {
+      next('/login')
+    }
+  }
 })
 
 export default router
