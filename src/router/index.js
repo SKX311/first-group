@@ -79,6 +79,13 @@ const routes = [
     name: 'appraisal',
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
+  {
+    path: '/class_item',
+    name: 'class_item',
+    component: () => import('../views/record/record_item/class_item.vue'),
+  }
+
+
 ]
 
 const router = new VueRouter({

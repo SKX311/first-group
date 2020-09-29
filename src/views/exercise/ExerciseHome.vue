@@ -109,7 +109,7 @@ export default {
   flex-direction: column;
 }
 .section {
-  width: 414px;
+  width: 100%;
   height: 5rem;
   background: rgba(255, 255, 255);
 }
