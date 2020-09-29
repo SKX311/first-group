@@ -14,13 +14,18 @@
         <van-tabbar-item icon="setting-o" to="/MineHome">我的</van-tabbar-item>
       </van-tabbar>
     </div>
+      <EmailBox></EmailBox>
   </div>
 </template>
 
 <script>
-export default {};
+import EmailBox from "./components/emailbox/EmailBox"
+export default {
+  components:{
+    EmailBox
+  }
+};
 </script>
-
 
 <style lang="scss">
 * {
