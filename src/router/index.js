@@ -86,7 +86,6 @@ const routes = [
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
   {
-<<<<<<< HEAD
     path: '/point',
     name: 'point',
     component: () => import('../views/exercise/practice_item/point.vue'),
@@ -129,21 +128,14 @@ const routes = [
 
     ]
   },
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
+{
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
 
-<<<<<<< HEAD
-{
-=======
+
   {
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),
@@ -151,10 +143,7 @@ const routes = [
       showTabbar: false,
     }
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
   {
     path: '/UserLearn',
     name: 'UserLearn',
@@ -275,7 +264,7 @@ const routes = [
       showTabbar: false,
     }
   }
->>>>>>> 2141285a1e9e3b95356a78194dd37343795cdd56
+
 ]
 
 const router = new VueRouter({
@@ -284,14 +273,11 @@ const router = new VueRouter({
   routes
 })
 
-<<<<<<< HEAD
 
 export default router;
-=======
-export default router;
 
 
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
+
 router.beforeEach((to, from, next) => {
   var TOKEN = localStorage.getItem('token')
   if (to.name === 'Login') {
