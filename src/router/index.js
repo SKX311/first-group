@@ -15,14 +15,11 @@ const routes = [
     path: '/Coach',
     name: 'Coach',
     component: () => import('../views/home/Coach.vue'),
-<<<<<<< HEAD
   },
   {
     path: '/TeacherDetails',
     name: 'TeacherDetails',
     component: () => import('../views/home/TeacherDetails.vue'),
-=======
->>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
   },
   {
     path: '/CourseHome',
@@ -58,7 +55,6 @@ const routes = [
     }
   },
   {
-<<<<<<< HEAD
 
     path: '/centre',
     name: 'centre',
@@ -91,28 +87,21 @@ const routes = [
   },
   {
 
-=======
->>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
-<<<<<<< HEAD
+
 {
-=======
-  {
->>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),
     meta: {
       showTabbar: false,
     }
-<<<<<<< HEAD
   },
 
-=======
-  }, {
+  {
     path: '/UserLearn',
     name: 'UserLearn',
     component: () => import('../views/mine/UserLearn.vue'),
@@ -232,7 +221,6 @@ const routes = [
       showTabbar: false,
     }
   }
->>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
 ]
 
 const router = new VueRouter({
@@ -241,14 +229,9 @@ const router = new VueRouter({
   routes
 })
 
-<<<<<<< HEAD
 
 export default router;
-
-router.beforeEach((to,from,next)=>{
-=======
 router.beforeEach((to, from, next) => {
->>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
   var TOKEN = localStorage.getItem('token')
   if (to.name === 'Login') {
     next()

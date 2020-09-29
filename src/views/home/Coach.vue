@@ -4,7 +4,7 @@
     <div class="top">
       <van-nav-bar title="一对一辅导" left-arrow @click-left="onClickLeft">
         <template #right>
-          <van-icon name="search" size="18" />
+          <van-icon name="search" size="18" @click="toSearch"/>
         </template>
       </van-nav-bar>
     </div>
@@ -20,7 +20,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -30,7 +30,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -40,7 +40,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -50,7 +50,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -60,7 +60,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -70,7 +70,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -80,7 +80,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -90,7 +90,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
       <div class="famous_one">
@@ -100,7 +100,7 @@
           <p class="famous_introduce">女 15年教龄</p>
         </div>
         <div class="famous_three">
-            <button>预约</button>
+            <button @click="make">预约</button>
         </div>
       </div>
     </div>
@@ -112,6 +112,12 @@ export default {
     methods:{
         onClickLeft(){
             this.$router.go(-1)
+        },
+        make(){
+          this.$router.push({path:"/class_item"})
+        },
+        toSearch(){
+           this.$router.push({path:"/Search"})
         }
     }
 };
