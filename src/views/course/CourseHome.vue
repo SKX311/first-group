@@ -72,7 +72,9 @@
     <div class="section">
       <div class="section-son" @click="CourseDetails" v-for="index in 10" :key="index">
         <p class="section-son-title">李老师16号到22号地理大课堂开课啦</p>
-        <p class="section-son-time">03月16日&nbsp;&nbsp;&nbsp;18:30~03月22日&nbsp;&nbsp;15:00|共8课时</p>
+        <p class="section-son-time">
+          03月16日&nbsp;&nbsp;&nbsp;18:30~03月22日&nbsp;&nbsp;15:00|共8课时
+        </p>
         <div class="section-son-one">
           <img
             class="section-son-img"
@@ -87,7 +89,10 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
     <router-view></router-view>
+>>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
   </div>
 </template>
 
