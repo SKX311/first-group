@@ -12,6 +12,11 @@ const routes = [
     }
   },
   {
+    path: '/Coach',
+    name: 'Coach',
+    component: () => import( '../views/home/Coach.vue'),
+  },
+  {
     path: '/CourseHome',
     name: 'CourseHome',
     component: () => import( '../views/course/CourseHome.vue'),
@@ -44,6 +49,7 @@ const routes = [
       showTabbar:true,
     }
   },
+  
 ]
 
 const router = new VueRouter({
