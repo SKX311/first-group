@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-=======
     <router-view />
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
     <div v-show="$route.meta.showTabbar">
       <van-tabbar route>
         <van-tabbar-item to="/"><img src="http://localhost:8080/img/tubiao1.png" alt="" style="width:0.4rem"/><p>首页</p></van-tabbar-item>
@@ -13,9 +10,6 @@
         <van-tabbar-item to="/MineHome"><img src="http://localhost:8080/img/tubiao05.png" alt="" style="width:0.4rem"/><p>我的</p></van-tabbar-item>
       </van-tabbar>
     </div>
-<<<<<<< HEAD
-    <router-view />
-=======
     <div
       class="box"
       id="Mailbox"
@@ -24,7 +18,6 @@
     >
       <van-icon name="hot-o" color="snow" size="1.5rem" />
     </div>
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
   </div>
 </template>
 
@@ -62,7 +55,6 @@ export default {
 * {
   font-size: 0.24rem;
 }
-<<<<<<< HEAD
 // .grid{
 //   height: 0.96rem;
 // }
@@ -74,7 +66,6 @@ export default {
 }
 .van-tabbar-item--active{
   color: #FF6B00 !important;
-=======
 .box {
   width: 1.5rem;
   height: 1.5rem;
@@ -86,6 +77,6 @@ export default {
   text-align: center;
   line-height: 2rem;
   margin: 0 auto;
->>>>>>> 3e7634bbe2c16ec40cc956f666cc6e57a5fb4e8a
+}
 }
 </style>
