@@ -297,10 +297,7 @@ export default {
   margin-left: 0.3rem;
   margin-top: 0.3rem;
 }
-.comment-top-action-number {
-}
-.stars {
-}
+
 .omment-bottom {
   margin-left: 1.5rem;
   color: #acacac;

@@ -17,7 +17,7 @@
       </van-swipe>
     </div>
     <div class="center">
-      <div>
+      <div @click="toCourse">
         <img src="http://localhost:8080/img/center1.png" alt="" />
         <p>特色课</p>
       </div>
@@ -25,7 +25,7 @@
         <img src="http://localhost:8080/img/center2.png" alt="" />
         <p>一对一辅导</p>
       </div>
-      <div>
+      <div @click="toCalendar">
         <img src="http://localhost:8080/img/center3.png" alt="" />
         <p>学习日历</p>
       </div>
@@ -33,19 +33,19 @@
     <div class="bottom">
         <div class="famous">
             <p class="famous_content">名师阵容</p>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher01.png" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher01.png" alt="">
             <div class="famous_two">
-                <p class="famous_name">杨德胜</p>
+                <p class="famous_name" >杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher02.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher02.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">文卫星</p>
                 <p class="famous_introduce">文老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher03.png" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher03.png" alt="">
             <div class="famous_two">
                 <p class="famous_name">马学斌</p>
                 <p class="famous_introduce">马老师，特级教师，多次被中国教学会评为全国高级教师</p>
@@ -266,43 +266,43 @@
         </div>
         <div class="star_lecturer ">
             <p class="famous_content">名师阵容</p>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
                 </div>
             </div>
-            <div class="famous_one"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
+            <div class="famous_one" @click="toTeacherDetail"><img src="http://localhost:8080/img/teacher04.jpg" alt="">
             <div class="famous_two">
                 <p class="famous_name">杨德胜</p>
                 <p class="famous_introduce">杨老师，特级教师，多次被中国教学会评为全国高级教师</p>
@@ -322,6 +322,15 @@ export default {
   methods:{
       toCoach(){
           this.$router.push({path:"/Coach"})
+      },
+      toCourse(){
+          this.$router.push({path:"/CourseHome"})
+      },
+      toTeacherDetail(){
+          this.$router.push({path:"/TeacherDetails"})
+      },
+      toCalendar(){
+          this.$router.push({path:"/Calendar"})
       }
   }
 };
