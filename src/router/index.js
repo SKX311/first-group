@@ -79,6 +79,49 @@ const routes = [
     name: 'appraisal',
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
+  {
+    path: '/point',
+    name: 'point',
+    component: () => import('../views/exercise/practice_item/point.vue'),
+    children: [
+      {
+        path: '/derivation',
+        name: 'derivation',
+        component: () => import('../views/exercise/practice_item/derivation.vue'),
+      },
+      {
+        path: '/limitation',
+        name: 'limitation',
+        component: () => import('../views/exercise/practice_item/limitation.vue'),
+      },
+      {
+        path: '/biology',
+        name: 'biology',
+        component: () => import('../views/exercise/practice_item/biology.vue'),
+      },
+      {
+        path: '/chemistry',
+        name: 'chemistry',
+        component: () => import('../views/exercise/practice_item/chemistry.vue'),
+      },
+      {
+        path: '/math',
+        name: 'math',
+        component: () => import('../views/exercise/practice_item/math.vue'),
+      },
+      {
+        path: '/physics',
+        name: 'physics',
+        component: () => import('../views/exercise/practice_item/physics.vue'),
+      },
+      {
+        path: '/english',
+        name: 'english',
+        component: () => import('../views/exercise/practice_item/english.vue'),
+      }
+
+    ]
+  },
 ]
 
 const router = new VueRouter({
