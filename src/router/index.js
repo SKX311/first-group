@@ -51,6 +51,11 @@ const routes = [
       showTabbar:true,
     }
   },
+  {
+    path: '/class_item',
+    name: 'class_item',
+    component: () => import( '../views/record/record_item/class_item.vue'),
+  }
 ]
 
 const router = new VueRouter({
