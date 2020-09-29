@@ -30,6 +30,11 @@ const routes = [
     }
   },
   {
+    path: "/CourseDetails",
+    name: "CourseDetails",
+    component: () => import("../views/course/CourseDetails.vue")
+  },
+  {
     path: '/ExerciseHome',
     name: 'ExerciseHome',
     component: () => import('../views/exercise/ExerciseHome.vue'),
@@ -91,9 +96,13 @@ const routes = [
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
+<<<<<<< HEAD
 
 {
   
+=======
+  {
+>>>>>>> e146b762659679b6ee59283c9dc848406882edff
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),
