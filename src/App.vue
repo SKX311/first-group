@@ -2,7 +2,7 @@
   <div id="app">
     
     <div v-show="$route.meta.showTabbar">
-      <van-tabbar v-model="active">
+      <van-tabbar route>
         <van-tabbar-item icon="home-o" to="/">首页</van-tabbar-item>
         <van-tabbar-item icon="search" to="/CourseHome">课程</van-tabbar-item>
         <van-tabbar-item icon="friends-o" to="/RecordHome"
@@ -15,7 +15,7 @@
       </van-tabbar>
     </div>
     <router-view />
-    <div class="grid"></div>
+    
   </div>
 </template>
 
@@ -23,7 +23,5 @@
 * {
   font-size: 0.24rem;
 }
-.grid{
-  height: 0.96rem;
-}
+
 </style>
