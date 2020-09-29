@@ -43,7 +43,7 @@
     </div>
     <div class="section">
       <div class="section-son" v-for="index in 10" :key="index">
-        <p class="section-son-title">渣男干往事往事干渣男</p>
+        <p class="section-son-title">李老师16号到22号地理大课堂开课啦</p>
         <p class="section-son-time">03月16日&nbsp;&nbsp;&nbsp;18:30~03月22日&nbsp;&nbsp;15:00|共8课时</p>
         <div class="section-son-one">
           <img
