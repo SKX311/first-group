@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../views/home/Coach.vue'),
   },
   {
+    path: '/TeacherDetails',
+    name: 'TeacherDetails',
+    component: () => import('../views/home/TeacherDetails.vue'),
+  },
+  {
     path: '/CourseHome',
     name: 'CourseHome',
     component: () => import('../views/course/CourseHome.vue'),
@@ -50,6 +55,7 @@ const routes = [
     }
   },
   {
+
     path: '/centre',
     name: 'centre',
     component: () => import('../views/exercise/practice_item/centre.vue'),
@@ -80,11 +86,19 @@ const routes = [
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
   {
+
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
-  }
-
+  },
+{
+    path: '/Login',
+    name: 'Login',
+    component: () => import( '../views/mine/Login.vue'),
+    meta:{
+      showTabbar:false,
+    }
+  },
 
 ]
 
@@ -94,4 +108,19 @@ const router = new VueRouter({
   routes
 })
 
+
 export default router;
+
+router.beforeEach((to,from,next)=>{
+  var TOKEN = localStorage.getItem('token')
+  if (to.name === 'Login') {
+    next()
+  } else {
+    if (TOKEN) {
+      next()
+    } else {
+      next('/login')
+    }
+  }
+})
+
