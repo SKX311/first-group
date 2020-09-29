@@ -52,7 +52,7 @@ export default {
   methods:{
     classyue(){
       this.$router.push({
-        path:'/class_item'
+        path:'/Coach'
       })
     }
   }
