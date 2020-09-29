@@ -15,11 +15,14 @@ const routes = [
     path: '/Coach',
     name: 'Coach',
     component: () => import('../views/home/Coach.vue'),
+<<<<<<< HEAD
   },
   {
     path: '/TeacherDetails',
     name: 'TeacherDetails',
     component: () => import('../views/home/TeacherDetails.vue'),
+=======
+>>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
   },
   {
     path: '/CourseHome',
@@ -55,6 +58,7 @@ const routes = [
     }
   },
   {
+<<<<<<< HEAD
 
     path: '/centre',
     name: 'centre',
@@ -87,19 +91,148 @@ const routes = [
   },
   {
 
+=======
+>>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
+<<<<<<< HEAD
 {
+=======
+  {
+>>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
     path: '/Login',
     name: 'Login',
-    component: () => import( '../views/mine/Login.vue'),
-    meta:{
-      showTabbar:false,
+    component: () => import('../views/mine/Login.vue'),
+    meta: {
+      showTabbar: false,
     }
+<<<<<<< HEAD
   },
 
+=======
+  }, {
+    path: '/UserLearn',
+    name: 'UserLearn',
+    component: () => import('../views/mine/UserLearn.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Calendar',
+    name: 'Calendar',
+    component: () => import('../views/mine/Calendar.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Search',
+    name: 'Search',
+    component: () => import('../views/mine/Search.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Money',
+    name: 'Money',
+    component: () => import('../views/mine/Money.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/MoneySize',
+    name: 'MoneySize',
+    component: () => import('../views/mine/MoneySize.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Teacher',
+    name: 'Teacher',
+    component: () => import('../views/mine/Teacher.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Collect',
+    name: 'Collect',
+    component: () => import('../views/mine/Collect.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Course',
+    name: 'Course',
+    component: () => import('../views/mine/Course.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Vip',
+    name: 'Vip',
+    component: () => import('../views/mine/Vip.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Order',
+    name: 'Order',
+    component: () => import('../views/mine/Order.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Preferential',
+    name: 'Preferential',
+    component: () => import('../views/mine/Preferential.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Study',
+    name: 'Study',
+    component: () => import('../views/mine/Study.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Vips',
+    name: 'Vips',
+    component: () => import('../views/mine/Vips.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/MyEmail',
+    name: 'MyEmail',
+    component: () => import('../views/mine/MyEmail.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Feedback',
+    name: 'Feedback',
+    component: () => import('../views/mine/Feedback.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Service',
+    name: 'Service',
+    component: () => import('../views/mine/Service.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/Intercalate',
+    name: 'Intercalate',
+    component: () => import('../views/mine/Intercalate.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }
+>>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
 ]
 
 const router = new VueRouter({
@@ -108,10 +241,14 @@ const router = new VueRouter({
   routes
 })
 
+<<<<<<< HEAD
 
 export default router;
 
 router.beforeEach((to,from,next)=>{
+=======
+router.beforeEach((to, from, next) => {
+>>>>>>> fa5cef2bdd8a3c0cc06f17da49c616a6614d63ab
   var TOKEN = localStorage.getItem('token')
   if (to.name === 'Login') {
     next()
