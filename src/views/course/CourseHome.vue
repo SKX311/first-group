@@ -37,8 +37,29 @@
             </div>
           </div>
         </van-dropdown-item>
-        <van-dropdown-item title="排序" ref="item"></van-dropdown-item>
-        <van-dropdown-item title="筛选" ref="item"></van-dropdown-item>
+        <van-dropdown-item title="排序" ref="item">
+          <div class="sort">
+            <div>综合排序</div>
+            <div>最新</div>
+            <div>最热</div>
+            <div>价格从低到高</div>
+            <div>价格从高到底</div>
+          </div>
+        </van-dropdown-item>
+        <van-dropdown-item title="筛选" ref="item">
+          <div class="screening">
+            <div class="div">全部</div>
+            <div class="div">大班课</div>
+            <div class="div">小班课</div>
+            <div class="div">公开课</div>
+            <div class="div">点播课</div>
+            <div class="div">面授课</div>
+            <div class="div">音频课</div>
+            <div class="div">系统课</div>
+            <div class="div">图文课</div>
+            <div class="div">会员课</div>
+          </div>
+        </van-dropdown-item>
       </van-dropdown-menu>
     </div>
     <div class="section">
@@ -88,21 +109,18 @@ export default {
   width: 200px;
   text-align: center;
   line-height: 200px;
-  border: 1px solid red;
 }
 .classIfication {
   width: 7.43rem;
-  border: 1px solid red;
+
   display: flex;
   flex-wrap: wrap;
 }
 .classIfication-One {
   width: 7.43rem;
-  border: 1px solid aqua;
 }
 .classIfication-Two {
   width: 7.43rem;
-  border: 1px solid pink;
 }
 .classIfication-Two-Active {
   display: flex;
@@ -133,7 +151,6 @@ export default {
 .classIfication-Three {
   height: 1.7rem;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -206,5 +223,37 @@ export default {
 }
 .section-son-two-PersonTimes {
   color: #acacac;
+}
+.sort {
+  width: 99%;
+}
+.sort div {
+  height: 1rem;
+  width: 99%;
+  border: 1px solid #f6f6f6;
+  text-align: center;
+  line-height: 1rem;
+}
+.sort div:hover {
+  color: red;
+}
+.screening {
+  width: 99%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.screening div {
+  height: 0.8rem;
+  width: 1.5rem;
+  background-color: #f5f5f5;
+  line-height: 0.8rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+}
+.screening div:hover {
+  background-color: #ebeefe;
+  color: red;
 }
 </style>
