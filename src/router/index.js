@@ -12,6 +12,11 @@ const routes = [
     }
   },
   {
+    path: '/Coach',
+    name: 'Coach',
+    component: () => import('../views/home/Coach.vue'),
+  },
+  {
     path: '/CourseHome',
     name: 'CourseHome',
     component: () => import('../views/course/CourseHome.vue'),
@@ -82,4 +87,4 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+export default router;
