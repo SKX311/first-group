@@ -33,7 +33,12 @@ const routes = [
     path: "/CourseDetails",
     name: "CourseDetails",
     component: () => import("../views/course/CourseDetails.vue")
-  },
+  }, 
+  {
+    path: "/Study",
+    name: "Study",
+    component: () => import("../views/course/Study.vue")
+  }, 
   {
     path: '/ExerciseHome',
     name: 'ExerciseHome',
@@ -77,29 +82,6 @@ const routes = [
     path: '/setvolume',
     name: 'setvolume',
     component: () => import('../views/exercise/practice_item/setvolume.vue'),
-    redirect: '/all',
-    children: [
-      {
-        path: '/all',
-        name: 'all',
-        component: () => import('../views/exercise/practice_item/all.vue'),
-      },
-      {
-        path: '/senior',
-        name: 'senior',
-        component: () => import('../views/exercise/practice_item/senior.vue'),
-      },
-      {
-        path: '/sethx',
-        name: 'sethx',
-        component: () => import('../views/exercise/practice_item/sethx.vue'),
-      },
-      {
-        path: '/setenlinsh',
-        name: 'setenlinsh',
-        component: () => import('../views/exercise/practice_item/setenlinsh.vue'),
-      },
-    ]
   },
   {
     path: '/aeromodelling',
@@ -168,7 +150,6 @@ const routes = [
       showTabbar: false,
     }
   },
-
   {
     path: '/UserLearn',
     name: 'UserLearn',
@@ -311,9 +292,7 @@ const router = new VueRouter({
   routes
 })
 
-
 export default router;
-
 router.beforeEach((to, from, next) => {
   var TOKEN = localStorage.getItem('token')
   if (to.name == 'Login' || to.name == 'SmsLogin' || to.name == 'Username') {

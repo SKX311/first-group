@@ -19,7 +19,7 @@
     <div style="background-color:#F0F2F5;width:100%">
       <div class="details">
         <div class="details-top">
-          <div style="font-size:16px">李老师16号到22号地理大课堂开课了</div>
+          <div style="font-size:16px">{{this.list.title}}</div>
           <div>
             <van-rate
               v-model="value"
@@ -32,20 +32,16 @@
             />
           </div>
         </div>
-        <div class="state">免费</div>
-        <div class="classhour">共8课时|119人已报名</div>
-        <div class="time">开课时间：2020.03.16&nbsp;&nbsp;&nbsp;18:30-2020.03.22&nbsp;&nbsp;15:00</div>
+        <div class="state">{{list.status}}</div>
+        <div class="classhour">共8课时|{{this.list.signup}}</div>
+        <div class="time">开课时间：{{this.list.time}}</div>
       </div>
+      
       <div class="team">
         <div class="team-title">教学团队</div>
         <div>
-          <img
-            class="team-title-img"
-            @click="headportrait"
-            src="https://baijiayun-wangxiao.oss-cn-beijing.aliyuncs.com/uploads/avatar.jpg"
-            alt
-          />
-          <p style="margin-left:0.4rem;font-size:14px">李青</p>
+          <img class="team-title-img" @click="headportrait" :src="this.list.img" alt />
+          <p style="margin-left:0.4rem;font-size:14px">{{this.list.name}}</p>
         </div>
       </div>
       <div class="Courseintroduction">
@@ -60,7 +56,7 @@
             <div class="Syllabus-Action-Top-Classhour">第一讲第一课时</div>
           </div>
           <div class="Syllabus-action-bottom">
-            <div class="Syllabus-action-bottom-name">李青</div>
+            <div class="Syllabus-action-bottom-name"></div>
             <div class="Syllabus-action-bottom-time">03月20日&nbsp;&nbsp;&nbsp;18:30-19:30</div>
           </div>
         </div>
@@ -97,7 +93,7 @@
       type="primary"
       block
       color="#EB6100"
-      @click="signup"
+      @click="study"
       v-show="!showSignup"
     >立即学习</van-button>
   </div>
@@ -113,11 +109,20 @@ export default {
       stars: 3,
       token: "",
       showSignup: true,
+      list: [],
+      data: [],
     };
   },
   created() {
     this.token = localStorage.getItem("token");
+    this.list = JSON.parse(this.$route.query.user);
+    let data = localStorage.data;
+    if (data) {
+      this.data = JSON.parse(data);
+    }
+    console.log(this.data);
   },
+
   methods: {
     headportrait() {
       if (this.token == "") {
@@ -145,6 +150,7 @@ export default {
         });
       } else {
         this.$toast("提示内容");
+        localStorage.data = JSON.stringify(this.list);
       }
     },
     signup() {
@@ -155,8 +161,14 @@ export default {
       } else {
         this.$toast("报名成功");
         this.showSignup = false;
+       
       }
     },
+    study(){
+      this.$router.push({
+        path:"/Study"
+      })
+    }
   },
 };
 </script>
