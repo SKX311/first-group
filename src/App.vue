@@ -3,17 +3,36 @@
     <router-view />
     <div v-show="$route.meta.showTabbar">
       <van-tabbar route>
-        <van-tabbar-item icon="home-o" to="/">首页</van-tabbar-item>
-        <van-tabbar-item icon="search" to="/CourseHome">课程</van-tabbar-item>
-        <van-tabbar-item icon="friends-o" to="/RecordHome"
-          >约课记录</van-tabbar-item
-        >
-        <van-tabbar-item icon="setting-o" to="/ExerciseHome"
-          >练习</van-tabbar-item
-        >
-        <van-tabbar-item icon="setting-o" to="/MineHome">我的</van-tabbar-item>
+        <van-tabbar-item to="/"><img src="http://localhost:8080/img/tubiao1.png" alt="" style="width:0.4rem"/><p>首页</p></van-tabbar-item>
+        <van-tabbar-item to="/CourseHome"><img src="http://localhost:8080/img/tubiao02.png" alt="" style="width:0.4rem"/><p>课程</p></van-tabbar-item>
+        <van-tabbar-item to="/RecordHome"><img src="http://localhost:8080/img/tubiao03.png" alt="" style="width:0.3rem"/><p>约课记录</p></van-tabbar-item>
+        <van-tabbar-item to="/ExerciseHome"><img src="http://localhost:8080/img/tubiao04.png" alt="" style="width:0.4rem"/><p>练习</p></van-tabbar-item>
+        <van-tabbar-item to="/MineHome"><img src="http://localhost:8080/img/tubiao05.png" alt="" style="width:0.4rem"/><p>我的</p></van-tabbar-item>
       </van-tabbar>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
+    
+    <!-- <div
+      class="boxone"
+      id="Mailbox"
+      @touchmove.prevent="Mailbox"
+      @click="$router.push('/Service')"
+    >
+      <van-icon name="hot-o" color="snow" size="1.5rem" />
+    </div> -->
+<<<<<<< HEAD
+=======
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
       <EmailBox></EmailBox>
   </div>
 </template>
@@ -31,5 +50,39 @@ export default {
 * {
   font-size: 0.24rem;
 }
+// .grid{
+//   height: 0.96rem;
+// }
 
+.van-tabbar-item{
+  text-align: center;
+}
+.van-tabbar-item--active{
+  color: #FF6B00 !important;
+.boxone {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: 3rem;
+  background-color: blue;
+  z-index: 9999;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+}
+
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
 </style>
