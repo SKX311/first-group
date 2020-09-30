@@ -158,15 +158,25 @@ const routes = [
 
     ]
   },
+<<<<<<< HEAD
   {
+=======
+{
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
 
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
+<<<<<<< HEAD
 
   {
 
+=======
+
+
+  {
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),
