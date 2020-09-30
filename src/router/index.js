@@ -159,7 +159,17 @@ const routes = [
     ]
   },
   {
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+  {
+=======
+{
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
 
     path: '/class_item',
     name: 'class_item',
@@ -168,9 +178,26 @@ const routes = [
 
   
 
+<<<<<<< HEAD
 
 
   {
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
+=======
+
+
+  {
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),

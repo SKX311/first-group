@@ -92,8 +92,12 @@
 <<<<<<< HEAD
     <router-view></router-view>
 =======
+<<<<<<< HEAD
+    <router-view></router-view>
+=======
     
 >>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
   </div>
 </template>
 

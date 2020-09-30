@@ -10,6 +10,15 @@
         <van-tabbar-item to="/MineHome"><img src="http://localhost:8080/img/tubiao05.png" alt="" style="width:0.4rem"/><p>我的</p></van-tabbar-item>
       </van-tabbar>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
     
     <!-- <div
       class="boxone"
@@ -19,6 +28,11 @@
     >
       <van-icon name="hot-o" color="snow" size="1.5rem" />
     </div> -->
+<<<<<<< HEAD
+=======
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
       <EmailBox></EmailBox>
   </div>
 </template>
@@ -59,5 +73,16 @@ export default {
 }
 }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2954e5f019f934fea323dc00de1cbf75c30ed14b
+>>>>>>> 8a321b1e2d9eba354c7c9a7ce36a8c24e6cdff96
+>>>>>>> 70bd28f92a144e5d022e0bde3b43607fe522d1c5
 </style>
