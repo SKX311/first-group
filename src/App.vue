@@ -31,5 +31,4 @@ export default {
 * {
   font-size: 0.24rem;
 }
-
 </style>

@@ -255,7 +255,7 @@ export default {
   width: 100%;
   height: 2.3rem;
   background: rgb(252, 85, 0);
-  border-radius: 0rem 0rem 2rem 2rem;
+  border-radius: 0rem 0rem 1.3rem 1.3rem;
 }
 .box_zindex {
   width: 85%;

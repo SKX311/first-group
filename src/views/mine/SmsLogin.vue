@@ -6,19 +6,22 @@
         alt=""
       />
       <div class="banner_username">
-        <van-cell-group>
-          <van-field v-model="username" placeholder="请输入账号" />
-        </van-cell-group>
-        <van-cell-group>
-          <van-field
-            v-model="password"
-            type="password"
-            placeholder="请输入密码"
-          />
-        </van-cell-group>
+        <!-- 找回密码部分 -->
+    <van-field v-model="username" center clearable placeholder="请输入手机号">
+      <template #button>
+        <van-button size="small" type="danger" @click="$toast('验证码已发送到您的手机');">获取验证码</van-button>
+      </template>
+    </van-field>
+    <van-field
+      clearable
+      v-model="password"
+      type="password"
+      placeholder="请输入验证码"
+    />
+    <!-- 找回密码部分 -->
         <div class="banner_span">
-          <span @click="$router.push('/Username')"> 找回密码 </span>
-          <span @click="$router.push('/SmsLogin')"> 注册/验证码登录 </span>
+          <span> *未注册的手机号将自动注册</span>
+          <span @click="$router.go(-1)"> 使用密码登录</span>
         </div>
         <!-- 登录按钮 -->
         <div class="box_btn">

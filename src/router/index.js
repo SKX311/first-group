@@ -37,7 +37,6 @@ const routes = [
       showTabbar: true,
     }
   },
-
   {
     path: '/MineHome',
     name: 'MineHome',
@@ -55,7 +54,6 @@ const routes = [
     }
   },
   {
-
     path: '/centre',
     name: 'centre',
     component: () => import('../views/exercise/practice_item/centre.vue'),
@@ -218,6 +216,20 @@ const routes = [
     meta: {
       showTabbar: false,
     }
+  }, {
+    path: '/Username',
+    name: 'Username',
+    component: () => import('../views/mine/Username.vue'),
+    meta: {
+      showTabbar: false,
+    }
+  }, {
+    path: '/SmsLogin',
+    name: 'SmsLogin',
+    component: () => import('../views/mine/SmsLogin.vue'),
+    meta: {
+      showTabbar: false,
+    }
   }
 ]
 
@@ -229,10 +241,9 @@ const router = new VueRouter({
 
 export default router;
 
-
 router.beforeEach((to, from, next) => {
   var TOKEN = localStorage.getItem('token')
-  if (to.name === 'Login') {
+  if (to.name == 'Login' || to.name == 'SmsLogin' || to.name == 'Username') {
     next()
   } else {
     if (TOKEN) {
@@ -242,4 +253,3 @@ router.beforeEach((to, from, next) => {
     }
   }
 })
-
