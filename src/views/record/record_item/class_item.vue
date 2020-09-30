@@ -84,7 +84,7 @@ export default {
       this.$router.go(-1);
     },
     xiangq(){
-      this.$$router.push({
+      this.$router.push({
         path:'/TeacherDetails'
       })
     }

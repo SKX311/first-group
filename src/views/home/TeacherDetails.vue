@@ -13,7 +13,8 @@
             <p class="famous_introduce">女 15年教龄</p>
           </div>
           <div class="famous_three">
-            <button>关注</button>
+            <button @click="Toast"  v-show="Show">关注</button>
+            <p v-show="isShow" @click="clear">已关注</p>
           </div>
         </div>
       </div>
@@ -107,16 +108,36 @@
           </div>
       </van-tab>
     </van-tabs>
-    <van-button color="#EB6100">立即预约</van-button>
+    <van-button color="#EB6100" @click="toClass_item">立即预约</van-button>
+    
   </div>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      Show:true,
+       isShow:false,
+    }
+  },
   methods: {
     onClickLeft() {
       this.$router.go(-1);
     },
+    toClass_item(){
+      this.$router.push({path:"/class_item"})
+    },
+    Toast(){
+      this.$toast.success('已关注')
+      this.Show=false
+      this.isShow=true
+    },
+    clear(){
+      this.$toast.success('已取消')
+      this.Show=true
+      this.isShow=false
+    }
   },
 };
 </script>
@@ -296,5 +317,10 @@ export default {
             p{
                 height: 4rem;
             }
+        }
+        .van-toast{
+          width: 1.5rem !important;
+          height: 1.5rem !important;
+
         }
 </style>

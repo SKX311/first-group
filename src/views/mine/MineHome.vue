@@ -202,7 +202,9 @@
     <!-- 我的页面背景板 -->
     <!-- ========================================== -->
     <!-- 遮罩层 -->
-    <van-overlay :show="show" @click="show = false" />
+    <van-overlay :show="show" @click="show = false">
+      <img class="img" src="http://localhost:8080/practice/zz.png" width="90%" height="90%" />
+    </van-overlay>
     <!-- 遮罩层 -->
     <div class="grid"></div>
     <!-- ========================================== -->
@@ -238,7 +240,7 @@ export default {
     //剩余学习币
     Currency() {
       console.log("剩余学习币");
-      this.$router.push('/Money')
+      this.$router.push("/Money");
     },
     //剩余学习币
   },
@@ -264,6 +266,9 @@ export default {
   margin-top: -1.5rem;
   margin-left: 7.5%;
   border-radius: 0.2rem;
+}
+.img{
+  margin:0.4rem;
 }
 .box_head {
   width: 99%;
@@ -369,7 +374,7 @@ export default {
   height: 0.5rem;
   padding-bottom: 0.2rem;
 }
-.grid{
+.grid {
   height: 0.96rem;
 }
 </style>

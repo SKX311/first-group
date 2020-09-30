@@ -54,7 +54,7 @@
         </div>
         <div class="excellent_course">
            <p class="excellent_course_content">精品课程</p>
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -70,7 +70,7 @@
             </div>
         </div>
          <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -86,7 +86,7 @@
             </div>
         </div>
          <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -150,7 +150,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -166,9 +166,9 @@
             </div>
         </div>
         <div class="recommended_course ">
-            <div class="excellent_course">
+            <div class="excellent_course" >
            <p class="excellent_course_content">精品课程</p>
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -184,7 +184,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -200,7 +200,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -216,7 +216,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -232,7 +232,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -248,7 +248,7 @@
             </div>
         </div>
         <div class="excellent_course">
-            <div class="excellent_course_introduce">
+            <div class="excellent_course_introduce" @click="toClass_item">
                 <div class="excellent_course_top">
                     <p class="excellent_course_issue">每时每课特级教师-自主招生冲刺讲座6-多元方程与可转化为多远方程组问题</p>
                     <span>共1课时</span>
@@ -331,6 +331,9 @@ export default {
       },
       toCalendar(){
           this.$router.push({path:"/Calendar"})
+      },
+      toClass_item(){
+          this.$router.push({path:"/class_item"})
       }
   }
 };

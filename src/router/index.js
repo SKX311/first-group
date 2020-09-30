@@ -30,6 +30,11 @@ const routes = [
     }
   },
   {
+    path: "/CourseDetails",
+    name: "CourseDetails",
+    component: () => import("../views/course/CourseDetails.vue")
+  },
+  {
     path: '/ExerciseHome',
     name: 'ExerciseHome',
     component: () => import('../views/exercise/ExerciseHome.vue'),
@@ -72,6 +77,29 @@ const routes = [
     path: '/setvolume',
     name: 'setvolume',
     component: () => import('../views/exercise/practice_item/setvolume.vue'),
+    redirect: '/all',
+    children: [
+      {
+        path: '/all',
+        name: 'all',
+        component: () => import('../views/exercise/practice_item/all.vue'),
+      },
+      {
+        path: '/senior',
+        name: 'senior',
+        component: () => import('../views/exercise/practice_item/senior.vue'),
+      },
+      {
+        path: '/sethx',
+        name: 'sethx',
+        component: () => import('../views/exercise/practice_item/sethx.vue'),
+      },
+      {
+        path: '/setenlinsh',
+        name: 'setenlinsh',
+        component: () => import('../views/exercise/practice_item/setenlinsh.vue'),
+      },
+    ]
   },
   {
     path: '/aeromodelling',
@@ -84,11 +112,54 @@ const routes = [
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
   {
+    path: '/point',
+    name: 'point',
+    component: () => import('../views/exercise/practice_item/point.vue'),
+    redirect: '/derivation',
+    children: [
+      {
+
+        path: '/derivation',
+        name: 'derivation',
+        component: () => import('../views/exercise/practice_item/derivation.vue'),
+      },
+      {
+        path: '/limitation',
+        name: 'limitation',
+        component: () => import('../views/exercise/practice_item/limitation.vue'),
+      },
+      {
+        path: '/biology',
+        name: 'biology',
+        component: () => import('../views/exercise/practice_item/biology.vue'),
+      },
+      {
+        path: '/chemistry',
+        name: 'chemistry',
+        component: () => import('../views/exercise/practice_item/chemistry.vue'),
+      },
+      {
+        path: '/math',
+        name: 'math',
+        component: () => import('../views/exercise/practice_item/math.vue'),
+      },
+      {
+        path: '/physics',
+        name: 'physics',
+        component: () => import('../views/exercise/practice_item/physics.vue'),
+      },
+      {
+        path: '/english',
+        name: 'english',
+        component: () => import('../views/exercise/practice_item/english.vue'),
+      }
+    ]
+  },
+  {
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
-
   {
     path: '/Login',
     name: 'Login',
@@ -97,6 +168,7 @@ const routes = [
       showTabbar: false,
     }
   },
+
   {
     path: '/UserLearn',
     name: 'UserLearn',
@@ -238,6 +310,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 export default router;
 

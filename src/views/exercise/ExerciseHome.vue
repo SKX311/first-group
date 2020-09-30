@@ -15,7 +15,7 @@
       </li>
     </ul>
     <div class="section">
-      <h1>近期模考</h1>
+      <p>近期模考</p>
       <div class="sort">
         <span>默认排序</span>
         <span>时间</span>
@@ -119,9 +119,9 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.section h1 {
+.section p {
   color: #8c8c8c;
-  font-size: 0.3rem;
+  font-size: 0.32rem;
   margin-left: 0.3rem;
   padding-top: 0.3rem;
 }
@@ -156,5 +156,6 @@ export default {
 }
 .robot p {
   color: #8c8c8c;
+  font-size: 0.2rem;
 }
 </style>
