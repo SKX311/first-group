@@ -10,7 +10,7 @@
         @click-right="onClickRight"
       >
         <template #right>
-          <van-icon name="search" size="0.5rem" color="#595959" />
+          <van-icon name="search" @click="$router.push('/Search')" size="0.5rem" color="#595959" />
         </template>
       </van-nav-bar>
     </div>
@@ -44,16 +44,16 @@
             </div>
           </div>
         </van-dropdown-item>
-        <van-dropdown-item title="排序" ref="item">
-          <div class="sort">
+        <van-dropdown-item @change="sort" v-model="value" :options="option1">
+          <!-- <div class="sort">
             <div>综合排序</div>
             <div>最新</div>
             <div>最热</div>
-            <div>价格从低到高</div>
+            <div @click="xx">价格从低到高</div>
             <div>价格从高到底</div>
-          </div>
+          </div>-->
         </van-dropdown-item>
-        <van-dropdown-item title="筛选" ref="item">
+        <van-dropdown-item title="筛选">
           <div class="screening">
             <div class="div">全部</div>
             <div class="div">大班课</div>
@@ -70,24 +70,25 @@
       </van-dropdown-menu>
     </div>
     <div class="section">
-      <div class="section-son" @click="CourseDetails" v-for="index in 10" :key="index">
-        <p class="section-son-title">李老师16号到22号地理大课堂开课啦</p>
-        <p class="section-son-time">03月16日&nbsp;&nbsp;&nbsp;18:30~03月22日&nbsp;&nbsp;15:00|共8课时</p>
+      <div
+        class="section-son"
+        v-for="(item,index) in list"
+        :key="index"
+        @click="CourseDetails(item)"
+      >
+        <p class="section-son-title">{{item.title}}</p>
+        <p class="section-son-time">{{item.time}}</p>
         <div class="section-son-one">
-          <img
-            class="section-son-img"
-            src="https://baijiayun-wangxiao.oss-cn-beijing.aliyuncs.com/uploads/avatar.jpg"
-          />
-          <span class="section-son-name">李青</span>
+          <img class="section-son-img" :src="item.img" />
+          <span class="section-son-name">{{item.name}}</span>
         </div>
         <div class="section-son-two">
-          <span class="section-son-two-PersonTimes">177人已报名</span>
-
-          <span class="section-son-two-button">免费</span>
+          <span class="section-son-two-PersonTimes">{{item.signup}}</span>
+          <span class="section-son-two-button">{{item.status}}</span>
         </div>
       </div>
     </div>
-    <router-view></router-view>
+    
   </div>
 </template>
 
@@ -96,9 +97,43 @@ export default {
   data() {
     return {
       show: false,
+      list: [],
+      value: 0,
+      option1: [
+        { text: "最新", value: 0 },
+        { text: "最热", value: 1 },
+        { text: "价格从低到高", value: 2 },
+        { text: "价格从高到底", value: 3 },
+      ],
     };
   },
+  created() {
+    this.$axios.get("list.json").then((res) => {
+      this.list = res.data.data;
+    });
+  },
   methods: {
+    sort() {
+      this.list.map((item) => {
+        if (this.value == 2) {
+          this.list.sort((a, b) => {
+            return a.age - b.age;
+          });
+        } else if (this.value == 3) {
+          this.list.sort((a, b) => {
+            return b.age - a.age;
+          });
+        }else if (this.value == 1) {
+          this.list.sort((a, b) => {
+            return b.xx - a.xx;
+          });
+        }else if(this.value==0){
+          this.list.sort((a, b) => {
+            return a.xx - b.xx;
+          });
+        }
+      });
+    },
     onClickRight() {},
     onConfirm() {
       this.$refs.item.toggle();
@@ -106,14 +141,15 @@ export default {
     determine() {
       this.show = false;
     },
-    CourseDetails() {
-      console.log("啊哈哈");
+    CourseDetails(item) {
       this.$router.push({
         path: "/CourseDetails",
+        query: {
+          user: JSON.stringify(item),
+        },
       });
     },
   },
-  created() {},
 };
 </script>
 

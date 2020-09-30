@@ -33,7 +33,12 @@ const routes = [
     path: "/CourseDetails",
     name: "CourseDetails",
     component: () => import("../views/course/CourseDetails.vue")
-  },
+  }, 
+  {
+    path: "/Study",
+    name: "Study",
+    component: () => import("../views/course/Study.vue")
+  }, 
   {
     path: '/ExerciseHome',
     name: 'ExerciseHome',
