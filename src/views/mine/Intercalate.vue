@@ -8,6 +8,9 @@
       @click-left="$router.go(-1)"
     />
     <!-- navbar关注老师页面 -->
+    <van-cell-group>
+  <van-cell title="设置内容" @click="$router.push('/Password')"/>
+  </van-cell-group>
     <van-button type="danger" block @click="ONCLICK">退出登录</van-button>
   </div>
 </template>

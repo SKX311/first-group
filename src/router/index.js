@@ -283,6 +283,13 @@ const routes = [
     meta: {
       showTabbar: false,
     }
+  }, {
+    path: '/Password',
+    name: 'Password',
+    component: () => import('../views/mine/Password.vue'),
+    meta: {
+      showTabbar: false,
+    }
   }
 ]
 
