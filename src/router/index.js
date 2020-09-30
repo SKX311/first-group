@@ -79,6 +79,29 @@ const routes = [
     path: '/setvolume',
     name: 'setvolume',
     component: () => import('../views/exercise/practice_item/setvolume.vue'),
+    redirect: '/all',
+    children: [
+      {
+        path: '/all',
+        name: 'all',
+        component: () => import('../views/exercise/practice_item/all.vue'),
+      },
+      {
+        path: '/senior',
+        name: 'senior',
+        component: () => import('../views/exercise/practice_item/senior.vue'),
+      },
+      {
+        path: '/sethx',
+        name: 'sethx',
+        component: () => import('../views/exercise/practice_item/sethx.vue'),
+      },
+      {
+        path: '/setenlinsh',
+        name: 'setenlinsh',
+        component: () => import('../views/exercise/practice_item/setenlinsh.vue'),
+      },
+    ]
   },
   {
     path: '/aeromodelling',
@@ -91,12 +114,13 @@ const routes = [
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
   {
-<<<<<<< HEAD
     path: '/point',
     name: 'point',
     component: () => import('../views/exercise/practice_item/point.vue'),
+    redirect: '/derivation',
     children: [
       {
+
         path: '/derivation',
         name: 'derivation',
         component: () => import('../views/exercise/practice_item/derivation.vue'),
@@ -134,27 +158,15 @@ const routes = [
 
     ]
   },
-{
-=======
+  {
 
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
   },
-<<<<<<< HEAD
-
 
   {
-=======
-<<<<<<< HEAD
 
-{
-  
-=======
-  {
->>>>>>> e146b762659679b6ee59283c9dc848406882edff
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),

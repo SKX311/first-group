@@ -11,6 +11,7 @@
           <!-- 下拉 -->
           <van-dropdown-menu>
             <van-dropdown-item
+            title="类型不限"
               v-model="value1"
               :options="option1"
             /> </van-dropdown-menu
@@ -43,9 +44,9 @@
 export default {
   data() {
     return {
-      value1: 0,
+      value1: 1,
       option1: [
-        { text: "类型不限", value: 0 },
+      
         { text: "全部", value: 1 },
         { text: "套装练习", value: 2 },
         { text: "考点专练", value: 3 },

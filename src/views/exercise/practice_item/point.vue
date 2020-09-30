@@ -16,7 +16,7 @@
             @open="handleOpen"
             @close="handleClose"
           >
-            <el-menu-item index="0" @click="go('/derivation')">
+            <el-menu-item index="0"  @click="go('/derivation')">
               <span slot="title">求导题库</span>
             </el-menu-item>
             <el-menu-item index="1" @click="go('limitation')">
@@ -55,15 +55,19 @@ export default {
   },
   methods: {
     onClickLeft() {
-      window.history.back();
+      this.$router.push({
+        path: "/ExerciseHome",
+      });
     },
     // 侧边
     handleOpen(key, keyPath) {
+      console.log(111);
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
+      console.log(222);
       console.log(key, keyPath);
-      this.index =key
+      this.index = key;
     },
     go(str) {
       console.log(str);
