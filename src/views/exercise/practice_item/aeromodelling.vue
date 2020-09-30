@@ -6,9 +6,9 @@
       </template>
     </van-nav-bar>
     <van-dropdown-menu>
-      <van-dropdown-item v-model="value1" :options="option1" />
-      <van-dropdown-item v-model="value2" :options="option2" />
-      <van-dropdown-item v-model="value3" :options="option3" />
+      <van-dropdown-item  title="考试类型" v-model="value1" :options="option1" />
+      <van-dropdown-item  title="考试状态" v-model="value2" :options="option2" />
+      <van-dropdown-item  title="参考状态" v-model="value3" :options="option3" />
     </van-dropdown-menu>
     <div class="log_nothing">
       <img
@@ -29,23 +29,20 @@ export default {
       value2: "a",
       value3: "j",
       option1: [
-        { text: "考试类型", value: 0 },
-        { text: "全部", value: 1 },
-        { text: "模拟考试", value: 2 },
-        { text: "正式考试", value: 3 },
+        { text: "全部", value: 0 },
+        { text: "模拟考试", value: 1 },
+        { text: "正式考试", value: 2 },
       ],
       option2: [
-        { text: "考试状态", value: "a" },
-        { text: "全部", value: "b" },
-        { text: "未开始", value: "c" },
-        { text: "进行中", value: "d" },
-        { text: "已结束", value: "e" },
+        { text: "全部", value: "a" },
+        { text: "未开始", value: "b" },
+        { text: "进行中", value: "c" },
+        { text: "已结束", value: "d" },
       ],
       option3: [
-        { text: "参考状态", value: "j" },
-        { text: "全部", value: "k" },
-        { text: "已做", value: "l" },
-        { text: "未做", value: "u" },
+        { text: "全部", value: "j" },
+        { text: "已做", value: "k" },
+        { text: "未做", value: "l" },
       ],
     };
   },

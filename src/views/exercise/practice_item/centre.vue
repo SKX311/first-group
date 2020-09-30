@@ -25,6 +25,7 @@
           <el-radio v-model="radio" label="2">按顺序做题</el-radio>
         </div>
       </div>
+      <van-button type="warning" size="large" @click="confirm">确定</van-button>
     </van-popup>
   </div>
 </template>
@@ -40,6 +41,7 @@ export default {
   methods: {
     onClickLeft() {
       window.history.back();
+     
     },
     gotoPoint() {
       this.$router.push({
@@ -50,7 +52,9 @@ export default {
     set() {
       this.setting = true;
     },
-  },
+    confirm(){
+      this.setting=false
+    }  },
 };
 </script>
 <style  scoped>

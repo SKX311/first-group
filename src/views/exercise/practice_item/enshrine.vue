@@ -8,6 +8,7 @@
     <van-dropdown-menu>
       <van-dropdown-item
         class="menu_grounp"
+        title="题目类型"
         v-model="value1"
         :options="option1"
       />
@@ -27,9 +28,9 @@
 export default {
   data() {
     return {
-      value1: 0,
+      value1: 1,
       option1: [
-        { text: "题目类型", value: 0 },
+      
         { text: "单选", value: 1 },
         { text: "多选", value: 2 },
         { text: "判断", value: 3 },
