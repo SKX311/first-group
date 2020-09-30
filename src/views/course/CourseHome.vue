@@ -89,10 +89,7 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-    <router-view></router-view>
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
+    
   </div>
 </template>
 

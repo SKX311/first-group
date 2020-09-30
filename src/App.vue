@@ -10,19 +10,16 @@
         <van-tabbar-item to="/MineHome"><img src="http://localhost:8080/img/tubiao05.png" alt="" style="width:0.4rem"/><p>我的</p></van-tabbar-item>
       </van-tabbar>
     </div>
-<<<<<<< HEAD
     
-    <div
-      class="box"
+    <!-- <div
+      class="boxone"
       id="Mailbox"
       @touchmove.prevent="Mailbox"
       @click="$router.push('/Service')"
     >
       <van-icon name="hot-o" color="snow" size="1.5rem" />
-    </div>
-=======
+    </div> -->
       <EmailBox></EmailBox>
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
   </div>
 </template>
 
@@ -39,13 +36,10 @@ export default {
 * {
   font-size: 0.24rem;
 }
-<<<<<<< HEAD
 // .grid{
 //   height: 0.96rem;
 // }
-=======
 
->>>>>>> f2832e246aaf325c49a2dae2ecea7c3e219284d6
 .van-tabbar-item{
   text-align: center;
   // img{
@@ -54,7 +48,7 @@ export default {
 }
 .van-tabbar-item--active{
   color: #FF6B00 !important;
-.box {
+.boxone {
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -65,11 +59,8 @@ export default {
   text-align: center;
   line-height: 2rem;
   margin: 0 auto;
-<<<<<<< HEAD
-}
-=======
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
 }
 }
+
 
 </style>

@@ -91,7 +91,6 @@ const routes = [
     component: () => import('../views/exercise/practice_item/appraisal.vue'),
   },
   {
-<<<<<<< HEAD
     path: '/point',
     name: 'point',
     component: () => import('../views/exercise/practice_item/point.vue'),
@@ -135,9 +134,7 @@ const routes = [
     ]
   },
 {
-=======
 
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
     path: '/class_item',
     name: 'class_item',
     component: () => import('../views/record/record_item/class_item.vue'),
@@ -145,19 +142,6 @@ const routes = [
 
 
   {
-=======
-<<<<<<< HEAD
-
-{
-  
-<<<<<<< HEAD
-  
-=======
-=======
-  {
->>>>>>> e146b762659679b6ee59283c9dc848406882edff
->>>>>>> 8038eb1882113359dd9d95b59bf664f2a806f7a0
->>>>>>> f2832e246aaf325c49a2dae2ecea7c3e219284d6
     path: '/Login',
     name: 'Login',
     component: () => import('../views/mine/Login.vue'),
